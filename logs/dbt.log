@@ -1,12 +1,12 @@
-[0m17:26:18.573586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edbe28510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edbe288d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edbe2a210>]}
+[0m12:08:20.756629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7190ff82a090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7190ff376a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719102053cd0>]}
 
 
-============================== 17:26:18.578704 | 4e5c132c-deea-4df2-8371-4e5a82f5b6ac ==============================
-[0m17:26:18.578704 [info ] [MainThread]: Running with dbt=1.11.2
-[0m17:26:18.580795 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'no_print': 'None', 'fail_fast': 'False', 'target_path': 'None', 'quiet': 'False', 'debug': 'False', 'invocation_command': 'dbt init dbt_snowflake', 'introspect': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/rvenancio/.dbt', 'empty': 'None', 'partial_parse': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'warn_error': 'None', 'write_json': 'True', 'static_parser': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'log_path': 'logs', 'use_colors': 'True'}
-[0m17:26:18.606756 [debug] [MainThread]: Starter project path: /home/rvenancio/.local/lib/python3.11/site-packages/dbt/include/starter_project
-[0m17:26:18.779553 [info ] [MainThread]: 
-Your new dbt project "dbt_snowflake" was created!
+============================== 12:08:20.775204 | ba11bf58-c123-4c80-b202-bea20d931157 ==============================
+[0m12:08:20.775204 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:08:20.777000 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'use_colors': 'True', 'profiles_dir': '/home/rvenancio/.dbt', 'log_cache_events': 'False', 'empty': 'None', 'static_parser': 'True', 'no_print': 'None', 'log_path': 'logs', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default', 'write_json': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'introspect': 'True'}
+[0m12:08:30.819434 [debug] [MainThread]: Starter project path: /mnt/c/test/dbt_snowflake/venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:08:31.176844 [info ] [MainThread]: 
+Your new dbt project "snowflake" was created!
 
 For more information on how to configure the profiles.yml file,
 please consult the dbt documentation here:
@@ -21,91 +21,83 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 
 Happy modeling!
 
-[0m17:26:18.780740 [info ] [MainThread]: Setting up your profile.
-[0m17:26:24.637468 [debug] [MainThread]: Traceback (most recent call last):
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/factory.py", line 68, in load_plugin
-    mod: Any = import_module("." + name, "dbt.adapters")
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/snowflake/__init__.py", line 2, in <module>
-    from dbt.adapters.snowflake.connections import SnowflakeConnectionManager
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/snowflake/connections.py", line 22, in <module>
-    from cryptography.hazmat.primitives import serialization
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/serialization/__init__.py", line 7, in <module>
-    from cryptography.hazmat.primitives._serialization import (
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/_serialization.py", line 10, in <module>
-    from cryptography.hazmat.primitives.hashes import HashAlgorithm
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/hashes.py", line 9, in <module>
-    from cryptography.hazmat.bindings._rust import openssl as rust_openssl
-ModuleNotFoundError: No module named '_cffi_backend'
-
-[0m17:26:24.639176 [error] [MainThread]: Encountered an error:
-No module named '_cffi_backend'
-[0m17:26:24.643253 [error] [MainThread]: Traceback (most recent call last):
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
-    result, success = func(*args, **kwargs)
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/cli/main.py", line 483, in init
-    results = task.run()
-              ^^^^^^^^^^
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/task/init.py", line 346, in run
-    self.setup_profile(profile_name)
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/task/init.py", line 262, in setup_profile
-    self.create_profile_from_target(adapter, profile_name=profile_name)
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/task/init.py", line 172, in create_profile_from_target
-    load_plugin(adapter)
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/factory.py", line 239, in load_plugin
-    return FACTORY.load_plugin(name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/factory.py", line 68, in load_plugin
-    mod: Any = import_module("." + name, "dbt.adapters")
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/snowflake/__init__.py", line 2, in <module>
-    from dbt.adapters.snowflake.connections import SnowflakeConnectionManager
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/dbt/adapters/snowflake/connections.py", line 22, in <module>
-    from cryptography.hazmat.primitives import serialization
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/serialization/__init__.py", line 7, in <module>
-    from cryptography.hazmat.primitives._serialization import (
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/_serialization.py", line 10, in <module>
-    from cryptography.hazmat.primitives.hashes import HashAlgorithm
-  File "/home/rvenancio/.local/lib/python3.11/site-packages/cryptography/hazmat/primitives/hashes.py", line 9, in <module>
-    from cryptography.hazmat.bindings._rust import openssl as rust_openssl
-ModuleNotFoundError: No module named '_cffi_backend'
-
-[0m17:26:24.647496 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 6.1487985, "process_in_blocks": "2160", "process_kernel_time": 0.373408, "process_mem_max_rss": "107356", "process_out_blocks": "0", "process_user_time": 1.437422}
-[0m17:26:24.649509 [debug] [MainThread]: Command `dbt init` failed at 17:26:24.649215 after 6.15 seconds
-[0m17:26:24.651191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edbe46c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edbe44850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x791edc0988d0>]}
-[0m17:26:24.652716 [debug] [MainThread]: Flushing usage events
-[0m17:26:25.279169 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m17:37:42.135085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f38c33290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f38d7afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f38c30ad0>]}
+[0m12:08:31.178130 [info ] [MainThread]: Setting up your profile.
+[0m12:08:43.487405 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:08:43.488699 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:08:43.489859 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:10:34.542805 [info ] [MainThread]: Profile snowflake written to /home/rvenancio/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:10:34.557137 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 134.28639, "process_in_blocks": "54616", "process_kernel_time": 1.337062, "process_mem_max_rss": "123528", "process_out_blocks": "8", "process_user_time": 2.165958}
+[0m12:10:34.561078 [debug] [MainThread]: Command `dbt init` succeeded at 12:10:34.560705 after 134.29 seconds
+[0m12:10:34.563378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7190ff3da450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7191037b9510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7190ff8459d0>]}
+[0m12:10:34.565106 [debug] [MainThread]: Flushing usage events
+[0m12:10:35.330692 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:11:05.944194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822e650ecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822e7599e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822e650fe10>]}
 
 
-============================== 17:37:42.140805 | 30fe3bc4-21d2-4207-bbe2-df69aa284754 ==============================
-[0m17:37:42.140805 [info ] [MainThread]: Running with dbt=1.11.2
-[0m17:37:42.142653 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'printer_width': '80', 'introspect': 'True', 'write_json': 'True', 'log_path': 'logs', 'use_colors': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_snowflake', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'static_parser': 'True', 'empty': 'None', 'version_check': 'True', 'profiles_dir': '/home/rvenancio/.dbt', 'debug': 'False'}
-[0m17:37:42.170284 [info ] [MainThread]: A project called dbt_snowflake already exists here.
-[0m17:37:42.173567 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.109628014, "process_in_blocks": "51136", "process_kernel_time": 0.396629, "process_mem_max_rss": "102188", "process_out_blocks": "0", "process_user_time": 1.560572}
-[0m17:37:42.175306 [debug] [MainThread]: Command `dbt init` succeeded at 17:37:42.175096 after 0.11 seconds
-[0m17:37:42.177014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f38c30f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f38c31d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x771f3d01fd10>]}
-[0m17:37:42.178440 [debug] [MainThread]: Flushing usage events
-[0m17:37:42.874885 [debug] [MainThread]: An error was encountered while trying to flush usage events
+============================== 12:11:05.962594 | e9aa3777-1f94-445d-b58b-123e7c5413ec ==============================
+[0m12:11:05.962594 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:11:05.964426 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'warn_error': 'None', 'log_format': 'default', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'empty': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'write_json': 'True', 'profiles_dir': '/home/rvenancio/.dbt', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'target_path': 'None', 'printer_width': '80', 'version_check': 'True'}
+[0m12:11:06.208212 [info ] [MainThread]: dbt version: 1.11.2
+[0m12:11:06.209429 [info ] [MainThread]: python version: 3.11.0rc1
+[0m12:11:06.210474 [info ] [MainThread]: python path: /mnt/c/test/dbt_snowflake/venv/bin/python
+[0m12:11:06.211402 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m12:11:10.659892 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:11:10.661758 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:11:10.662858 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:11:10.975989 [info ] [MainThread]: Using profiles dir at /home/rvenancio/.dbt
+[0m12:11:10.978088 [info ] [MainThread]: Using profiles.yml file at /home/rvenancio/.dbt/profiles.yml
+[0m12:11:10.979774 [info ] [MainThread]: Using dbt_project.yml file at /mnt/c/test/dbt_snowflake/dbt_project.yml
+[0m12:11:10.999604 [info ] [MainThread]: adapter type: snowflake
+[0m12:11:11.001536 [info ] [MainThread]: adapter version: 1.11.0
+[0m12:11:11.003579 [info ] [MainThread]: Configuration:
+[0m12:11:11.005014 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:11:11.006410 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:11:11.007706 [info ] [MainThread]: Required dependencies:
+[0m12:11:11.009000 [debug] [MainThread]: Executing "git --help"
+[0m12:11:11.040340 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:11:11.042293 [debug] [MainThread]: STDERR: "b''"
+[0m12:11:11.044331 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:11:11.046559 [info ] [MainThread]: Connection:
+[0m12:11:11.048775 [info ] [MainThread]:   account: UXIPWCR-DJ20625
+[0m12:11:11.051228 [info ] [MainThread]:   user: RALPHVENANCIO
+[0m12:11:11.053086 [info ] [MainThread]:   database: ANALYTICS_DB
+[0m12:11:11.054784 [info ] [MainThread]:   warehouse: DBT_WH
+[0m12:11:11.056163 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m12:11:11.057548 [info ] [MainThread]:   schema: TRANSFORMATIONS
+[0m12:11:11.059117 [info ] [MainThread]:   authenticator: None
+[0m12:11:11.060868 [info ] [MainThread]:   oauth_client_id: None
+[0m12:11:11.062433 [info ] [MainThread]:   query_tag: None
+[0m12:11:11.064391 [info ] [MainThread]:   client_session_keep_alive: False
+[0m12:11:11.067303 [info ] [MainThread]:   host: None
+[0m12:11:11.069535 [info ] [MainThread]:   port: None
+[0m12:11:11.071530 [info ] [MainThread]:   proxy_host: None
+[0m12:11:11.073780 [info ] [MainThread]:   proxy_port: None
+[0m12:11:11.075786 [info ] [MainThread]:   protocol: None
+[0m12:11:11.077926 [info ] [MainThread]:   connect_retries: 1
+[0m12:11:11.079963 [info ] [MainThread]:   connect_timeout: None
+[0m12:11:11.083191 [info ] [MainThread]:   retry_on_database_errors: False
+[0m12:11:11.085882 [info ] [MainThread]:   retry_all: False
+[0m12:11:11.088058 [info ] [MainThread]:   insecure_mode: False
+[0m12:11:11.089824 [info ] [MainThread]:   reuse_connections: True
+[0m12:11:11.092448 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m12:11:11.094526 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m12:11:11.101438 [info ] [MainThread]: Registered adapter: snowflake=1.11.0
+[0m12:11:23.459119 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m12:11:28.321216 [debug] [MainThread]: Using snowflake connection "debug"
+[0m12:11:28.322621 [debug] [MainThread]: On debug: select 1 as id
+[0m12:11:28.324075 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:11:30.544366 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.220 seconds
+[0m12:11:30.546860 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:11:30.548576 [info ] [MainThread]: [31m1 check failed:[0m
+[0m12:11:30.550245 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </mnt/c/test/dbt_snowflake/dbt_project.yml> not found
+
+[0m12:11:30.555122 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 24.68427, "process_in_blocks": "46168", "process_kernel_time": 2.461463, "process_mem_max_rss": "140052", "process_out_blocks": "2224", "process_user_time": 2.892638}
+[0m12:11:30.556777 [debug] [MainThread]: Command `dbt debug` failed at 12:11:30.556603 after 24.69 seconds
+[0m12:11:30.558650 [debug] [MainThread]: Connection 'debug' was left open.
+[0m12:11:30.560907 [debug] [MainThread]: On debug: Close
+[0m12:11:30.735106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822ea8b54d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822ea8b59d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7822e4df0450>]}
+[0m12:11:30.736898 [debug] [MainThread]: Flushing usage events
+[0m12:11:31.380663 [debug] [MainThread]: An error was encountered while trying to flush usage events
