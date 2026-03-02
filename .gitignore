@@ -1,2 +1,6 @@
 /venv
 /logs
+
+.env
+*.log
+dbt.log
