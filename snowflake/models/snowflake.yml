@@ -1,0 +1,8 @@
+sources:
+  - name: db_test
+    schema: db_test
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_ORDERS
+      - name: RAW_ORDER_ITEMS
+      - name: RAW_PRODUCTS
